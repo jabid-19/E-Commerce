@@ -1,16 +1,17 @@
 <?php
-	include '../lib/Session.php';
-	Session::checkSession();
+include '../lib/Session.php';
+Session::checkSession();
 ?>
 
 <?php
-  header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache"); 
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
-  header("Cache-Control: max-age=2592000");
+header("Cache-Control: no-cache, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+header("Cache-Control: max-age=2592000");
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Admin</title>
@@ -33,34 +34,35 @@
     <!-- END: load jquery -->
     <script type="text/javascript" src="js/table/table.js"></script>
     <script src="js/setup.js" type="text/javascript"></script>
-	 <script type="text/javascript">
-        $(document).ready(function () {
+    <script type="text/javascript">
+        $(document).ready(function() {
             setupLeftMenu();
-		    setSidebarHeight();
+            setSidebarHeight();
         });
     </script>
 
 </head>
+
 <body>
     <div class="container_12">
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
                     <!-- <img src="img/livelogo.png" alt="Logo" /> -->
-				</div>
-				<div class="floatleft middle">
-					<h1>Ecom</h1>
-					
-				</div>
+                </div>
+                <div class="floatleft middle">
+                    <h1>Ecom</h1>
+
+                </div>
                 <div class="floatright">
                     <div class="floatleft">
                         <img src="img/img-profile.jpg" alt="Profile Pic" /></div>
 
-                        <?php
-                            if (isset($_GET['action']) && $_GET['action']=="logout") {
-                                Session:: destroy();
-                            }
-                        ?>
+                    <?php
+                    if (isset($_GET['action']) && $_GET['action'] == "logout") {
+                        Session::destroy();
+                    }
+                    ?>
                     <div class="floatleft marginleft10">
                         <ul class="inline-ul floatleft">
                             <li>Hello Admin</li>
@@ -85,4 +87,3 @@
         </div>
         <div class="clear">
         </div>
-    

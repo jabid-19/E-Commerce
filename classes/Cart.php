@@ -64,4 +64,6 @@ class Cart{
         $deldata=$this->db->delete($query);
     }
 }
+
+
 ?>

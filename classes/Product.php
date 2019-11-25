@@ -51,7 +51,7 @@ class Product {
                 return $msg;
             }
             
-            $inserted_rows = $db->insert($query);
+            $inserted_rows = $this->db->insert($query);
             if ($inserted_rows) {
                  echo "<span class='success'>Image Inserted Successfully.
                  </span>";
